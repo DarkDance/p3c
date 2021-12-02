@@ -1,0 +1,29 @@
+<?xml version="1.0"?>
+
+<ruleset name="AlibabaJavaExceptions" xmlns="http://pmd.sourceforge.net/ruleset/2.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://pmd.sourceforge.net/ruleset/2.0.0 http://pmd.sourceforge.net/ruleset_2_0_0.xsd">
+    <description>PateoJavaExtend</description>
+
+    <rule name="AvoidFastJsonAutoTypeSupportRule"
+          language="java"
+          since="52.1.1"
+          message="java.extend.AvoidFastJsonAutoTypeSupportRule.rule.msg"
+          class="com.alibaba.p3c.pmd.lang.java.rule.extend.AvoidFastJsonAutoTypeSupportRule">
+        <description>java.extend.AvoidFastJsonAutoTypeSupportRule.rule.desc</description>
+        <priority>1</priority>
+        <example>
+            <![CDATA[
+                Negative example:
+
+                import com.alibaba.fastjson.parser.ParserConfig;
+
+                public class NegativeExample {
+                    public static void main(String[] args) {
+                        ParserConfig.getGlobalInstance().setAutoTypeSupport(true);
+                    }
+                }
+            ]]>
+        </example>
+    </rule>
+</ruleset>

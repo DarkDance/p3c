@@ -555,4 +555,14 @@
         <![CDATA[浮点数之间的等值判断，基本数据类型不能用==来比较，包装数据类型不能用equals来判断。]]>
     </entry>
 
+
+    <entry key="java.extend.AvoidFastJsonAutoTypeSupportRule.rule.msg">
+        <![CDATA[请不要将fastjson的setAutoTypeSupport特性设置为true]]>
+    </entry>
+    <entry key="java.extend.AvoidFastJsonAutoTypeSupportRule.rule.desc">
+        <![CDATA[
+        说明：fastjson的setAutoTypeSupport特性存在安全漏洞
+        ]]>
+    </entry>
+
 </properties>

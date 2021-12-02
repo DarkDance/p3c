@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<test-data xmlns="http://pmd.sourceforge.net/rule-tests"
+           xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+           xsi:schemaLocation="http://pmd.sourceforge.net/rule-tests https://pmd.sourceforge.io/rule-tests_1_0_0.xsd">
+    <code-fragment id="finally-has-return">
+        <![CDATA[
+	            import com.alibaba.fastjson.parser.ParserConfig;
+
+                public class NegativeExample {
+                    public static void main(String[] args) {
+                        ParserConfig.getGlobalInstance().setAutoTypeSupport(true);
+                    }
+                }
+		]]>
+    </code-fragment>
+    <test-code>
+        <description>finally statement contains return</description>
+        <expected-problems>1</expected-problems>
+        <expected-linenumbers>5</expected-linenumbers>
+        <code-ref id="finally-has-return"/>
+    </test-code>
+
+    <!-- ====================================================================== -->
+
+</test-data>
